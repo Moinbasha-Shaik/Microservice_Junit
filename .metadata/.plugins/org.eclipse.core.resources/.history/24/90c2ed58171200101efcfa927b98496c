@@ -1,0 +1,26 @@
+package in.basha;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class CalculatorTest {
+
+	@Test
+	void addTest(Integer a,Integer b) {
+		Calculator calculator=new Calculator();
+		Integer actual = calculator.add(10, 20);
+		Integer expected=30;
+		assertEquals(actual, expected);
+	}
+	
+	@Test
+	void multiplyTest(Integer a,Integer b) {
+		Calculator calculator=new Calculator();
+		Integer actual = calculator.multiply(10, 20);
+		Integer expected=200;
+		assertEquals(actual, expected);
+	}
+}

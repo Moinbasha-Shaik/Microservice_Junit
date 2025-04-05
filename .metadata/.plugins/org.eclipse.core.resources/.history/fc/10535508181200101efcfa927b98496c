@@ -1,0 +1,35 @@
+package in.basha;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+
+public class CalculatorTest {
+	private static Calculator cal=null;
+	
+	@BeforeAll
+	public void befAll() {
+		cal=new Calculator();
+	}
+	
+	public void aftAll() {
+		cal=null;
+	}
+
+	@Test
+	void addTest(Integer a,Integer b) {
+		calculator=
+		Integer actual = calculator.add(10, 20);
+		Integer expected=30;
+		assertEquals(actual, expected);
+	}
+	
+	@Test
+	void multiplyTest(Integer a,Integer b) {
+		Calculator calculator=new Calculator();
+		Integer actual = calculator.multiply(10, 20);
+		Integer expected=200;
+		assertEquals(actual, expected);
+	}
+}

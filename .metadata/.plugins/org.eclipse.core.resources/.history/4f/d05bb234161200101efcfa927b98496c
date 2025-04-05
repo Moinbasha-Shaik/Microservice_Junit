@@ -1,0 +1,16 @@
+package in.basha;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+public class CalculatorTest {
+
+	@Test
+	void addTest(Integer a,Integer b) {
+		Calculator calculator=new Calculator();
+		Integer actual = calculator.add(10, 20);
+		Integer expected=30;
+		assertEquals(actual, expected);
+	}
+}

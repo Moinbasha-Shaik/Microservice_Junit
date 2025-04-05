@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: APIGateway
+  cloud:
+    gateway:
+      routes:
+        - id: employee-api
+          uri: /EMPLOYEE
+          predicates:
+            - Path=/employee/**
+          
+
+        - id: department-api
+          uri: /DEPARTMENTS
+          predicates:
+            - Path=/department/**
+          
+
+        
+
+server:
+  port: 3333
